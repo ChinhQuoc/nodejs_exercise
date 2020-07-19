@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "user1",
+      "email": "lalilatran@gmail.com",
+      "age": "20"
+    },
+    {
+      "id": "2",
+      "name": "hiep",
+      "email": "dthiep.gm@gmail.com",
+      "age": "23"
+    },
+    {
+      "name": "lala",
+      "email": "root@gmail.com",
+      "age": "29",
+      "id": "Hh_GY1xK1"
+    },
+    {
+      "name": "fafa",
+      "email": "gretre@greg",
+      "age": "45",
+      "id": "aQMAhzi0a"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+//- h1 Hello
+//- a(href="/user") User
+
+form.seach-form(action="/users/search", method="GET")
+  input(name="name", type="text", placeholder="name", value=name)
+  input(name="age", type="text", placeholder="age", value=age)
+  input(type="submit")
+
+.users
+    if users.length > 0
+        table
+            thead
+            tr
+                th  Name 
+                th  Email 
+                th  Age
+            tbody
+                each user in users
+                    tr
+                        td=  user.name
+                        td=  user.email
+                        td=  user.age
+    else
+        p No user to display
