@@ -41,10 +41,8 @@ app.get('/users/create', (req, res) => {
 app.get('/users/search', (req, res) => {
     let name_search = req.query.name;
     let age_search = req.query.age;
-    console.log("name_search",name_search);
-    console.log("age_search",age_search);
 
-    let result = db.get('users').filter(user => {
+    let result = db.get('users').value().filter(user => {
         console.log("user");
         return user.name.toLowerCase().indexOf(name_search.toLowerCase()) !== -1 && user.age === age_search;
     })
@@ -54,7 +52,6 @@ app.get('/users/search', (req, res) => {
     //     'age': age_search
     // })
 
-    console.log("result",result);
     res.render("users/index", {
         users: result,
         name: req.query.name,
