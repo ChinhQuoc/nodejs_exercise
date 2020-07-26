@@ -1,0 +1,30 @@
+extends ../layouts/common
+block content
+    a(href="/users/create") New
+
+    form.seach-form(action="/users/search", method="GET")
+        input(name="name", type="text", placeholder="name", value=name)
+        input(name="age", type="text", placeholder="age", value=age)
+        input(type="submit")
+
+    .users
+        if users.length > 0
+            table.table
+                thead
+                tr
+                    th  Name 
+                    th  Email 
+                    th  Age
+                    th  Phone
+                    th  Action
+                tbody
+                    each user in users
+                        tr
+                            td=  user.name
+                            td=  user.email
+                            td=  user.age 
+                            td=  user.phone
+                            td 
+                                a(href='/users/' + user.id) View
+        else
+            p No user to display
